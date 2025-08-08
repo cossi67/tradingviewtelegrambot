@@ -1,15 +1,19 @@
-# TradingView → Telegram Webhook Bot
+# Bot Telegram pour alertes TradingView
 
-## Déploiement Render.com (gratuit)
+Ce projet déploie un serveur Flask qui reçoit des alertes webhook depuis TradingView  
+et les transmet automatiquement dans un groupe ou chat Telegram.
 
-1. Crée un compte sur https://render.com  
-2. Crée un nouveau Web Service connecté à ce repo GitHub  
-3. Configure les variables d'environnement :  
-   - TELEGRAM_TOKEN = "ton token"  
-   - TELEGRAM_CHAT_ID = "ton chat id"  
-4. Lancer le service  
-5. Copier l’URL fournie (ex: https://xxx.onrender.com/webhook)  
-6. Dans TradingView, crée une alerte avec cette URL en Webhook  
-7. Mets dans le message JSON de TradingView:  
-```json
-{"message": "Signal EURUSD Buy détecté"}
+---
+
+## Usage
+
+- Configurer les variables d'environnement `TELEGRAM_TOKEN` et `TELEGRAM_CHAT_ID` sur Render.  
+- Déployer le service sur Render (ou autre hébergeur).  
+- Configurer les alertes TradingView avec l'URL webhook pointant vers ce service.
+
+---
+
+## Auteur
+
+Projet réalisé avec l'aide d’Usman (ChatGPT).
+
